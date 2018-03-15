@@ -50,6 +50,7 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
+    puts 'after_sign_in_path_for'
     current_customer_id = Customer.current&.id
     previous_customer_id = session["customer_id"].to_i
     if current_customer_id != 0  && previous_customer_id != 0
