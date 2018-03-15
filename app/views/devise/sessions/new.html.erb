@@ -1,4 +1,4 @@
-<% if request.subdomain == '' || (!Customer.current.nil? && Customer.current.authentication_type == 0) %>
+<% if request.subdomain == '' || (request.subdomain != '' && !Customer.current.nil? && Customer.current.authentication_type == 0) %>
 <div class="authform">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign in</h3>
