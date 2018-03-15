@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f1e1f2b-0624-456c-9d02-720a1ab80330" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -54,8 +56,8 @@
       <file leaf-file-name="omniauth_callbacks_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="78" lean-forward="false" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -81,16 +83,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.json.jbuilder" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/customers/index.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,8 +96,18 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="48" lean-forward="true" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -133,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>binding</find>
       <find>binding.</find>
       <find>binding.p</find>
       <find>binding.pry</find>
@@ -163,6 +164,7 @@
       <find>config.ma</find>
       <find>config.mai</find>
       <find>config.mail</find>
+      <find>verify_authenticity_token</find>
     </findStrings>
     <replaceStrings>
       <replace>saml</replace>
@@ -223,10 +225,10 @@
         <option value="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_nav_links_for_auth.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
@@ -614,7 +616,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CoffeeScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="produc&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/environments/production.rb&#10;devise&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;user.rb&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/user.rb&#10;route&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/routes.rb&#10;application&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/application_controller.rb&#10;session_store&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/session_store.rb&#10;omniauth&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/omniauth.rb&#10;dev&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;devi&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;omni&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/omniauth.rb&#10;devis&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;customer&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/customer.rb&#10;customer.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/customer.rb&#10;devise.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;user.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/user.rb&#10;users&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/users_controller.rb&#10;OmniauthCallbacksController&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/users/omniauth_callbacks_controller.rb&#10;routes&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/routes.rb&#10;devise.rb&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb" />
+    <property name="SearchEverywhereHistoryKey" value="sess&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/sessions_controller.rb&#10;produc&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/environments/production.rb&#10;devise&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;user.rb&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/user.rb&#10;route&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/routes.rb&#10;application&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/application_controller.rb&#10;session_store&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/session_store.rb&#10;omniauth&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/omniauth.rb&#10;dev&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;devi&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;omni&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/omniauth.rb&#10;devis&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;customer&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/customer.rb&#10;customer.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/customer.rb&#10;devise.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb&#10;user.r&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/models/user.rb&#10;users&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/users_controller.rb&#10;OmniauthCallbacksController&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/app/controllers/users/omniauth_callbacks_controller.rb&#10;routes&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/routes.rb&#10;devise.rb&#9;FILE&#9;file:///Volumes/Work/Development/multi-tenant/tenant_management/config/initializers/devise.rb" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -942,12 +944,12 @@
       <workItem from="1521057700834" duration="2779000" />
       <workItem from="1521078235202" duration="3259000" />
       <workItem from="1521084020978" duration="27857000" />
-      <workItem from="1521150876840" duration="2640000" />
+      <workItem from="1521150876840" duration="2938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36535000" />
+    <option name="totallyTimeSpent" value="36833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="987" extended-state="6" />
@@ -1137,14 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1355,14 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1371,10 +1357,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="78" lean-forward="false" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="48" lean-forward="true" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
