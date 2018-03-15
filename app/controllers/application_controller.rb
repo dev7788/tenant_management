@@ -12,7 +12,9 @@ class ApplicationController < ActionController::Base
 
   def authorize_current_activity
     # See if we're coming in from another customer
-    
+
+    binding.pry
+
     current_customer_id = Customer.current&.id
     previous_customer_id = session["customer_id"].to_i
     if current_customer_id && previous_customer_id > 0 && (previous_customer_id != current_customer_id)
