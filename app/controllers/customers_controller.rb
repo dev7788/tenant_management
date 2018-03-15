@@ -28,6 +28,14 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
+    @customerUsers = []
+    if @customer.present?
+      subdomain = @customer.subdomain
+
+      # Apartment::Tenant.switch!(subdomain) do
+      #   @customerUsers = User.all
+      # end
+    end
   end
 
   # POST /customers
@@ -35,10 +43,22 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     @customer.active = true
-
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to customers_path, notice: 'Customer was successfully created.' }
+
+        if params[:customer][:authentication_type] == '0'
+          # Switch to subdomain and invite an admin.
+          Apartment::Tenant.switch(params[:customer][:subdomain]) do
+            User.invite!(:email => params[:customer][:email], :name => 'Administrator')
+            user = User.find_by_email(params[:customer][:email])
+            if user.present?
+              user.role = :admin
+              user.save
+            end
+          end
+        end
+
+        format.html { redirect_to customers_path, notice: 'Tenant was successfully created.' }
         format.json { render :show, status: :created, location: @customer }
       else
         format.html { render :new }
@@ -52,7 +72,18 @@ class CustomersController < ApplicationController
   def update
     respond_to do |format|
       if @customer.update(customer_params)
-        format.html { redirect_to customers_path, notice: 'Customer was successfully updated.' }
+        if params[:customer][:authentication_type] == '0'
+          # Switch to subdomain and invite an admin.
+          Apartment::Tenant.switch( @customer.subdomain) do
+            User.invite!(:email => params[:customer][:email], :name => 'Administrator')
+            user = User.find_by_email(params[:customer][:email])
+            if user.present?
+              user.role = :admin
+              user.save
+            end
+          end
+        end
+        format.html { redirect_to customers_path, notice: 'Tenant was successfully updated.' }
         format.json { render :show, status: :ok, location: @customer }
       else
         format.html { render :edit }
@@ -66,7 +97,7 @@ class CustomersController < ApplicationController
   def destroy
     @customer.destroy
     respond_to do |format|
-      format.html { redirect_to customers_url, notice: 'Customer was successfully destroyed.' }
+      format.html { redirect_to customers_url, notice: 'Tenant was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -79,6 +110,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:subdomain)
+      params.require(:customer).permit(:subdomain, :email, :idp_login, :fingerprint, :authentication_type)
     end
 end

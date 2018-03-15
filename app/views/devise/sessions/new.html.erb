@@ -1,3 +1,4 @@
+<% if request.subdomain == '' || (request.subdomain != '' && Customer.current.authentication_type == 0) %>
 <div class="authform">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign in</h3>
@@ -26,3 +27,8 @@
       <% end -%>
   <% end %>
 </div>
+<% else %>
+    <div style="text-align: center;">
+      <%= link_to "Sign in with SAML", "#{user_saml_omniauth_authorize_path()}?subdomain=#{request.subdomain}", class: "btn btn-primary sigin-saml" %>
+    </div>
+<% end %>

@@ -4,14 +4,14 @@ Rails.application.routes.draw do
   resources :customers, except: [:show]
   get 'customers/widget_counts'
 
-  devise_for :users, :controllers => { invitations: 'devise/invitations' }
+  devise_for :users, :controllers => { invitations: 'devise/invitations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :user_links, only: [:create, :destroy]
 
   resources :users do
     post :invite, :on => :collection
   end
-
   root to: 'visitors#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

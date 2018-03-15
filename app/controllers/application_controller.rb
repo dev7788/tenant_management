@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 
   def authorize_current_activity
     # See if we're coming in from another customer
+    
     current_customer_id = Customer.current&.id
     previous_customer_id = session["customer_id"].to_i
     if current_customer_id && previous_customer_id > 0 && (previous_customer_id != current_customer_id)
@@ -44,6 +45,20 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+  end
+
+  private
+
+  def after_sign_in_path_for(resource)
+    current_customer_id = Customer.current&.id
+    previous_customer_id = session["customer_id"].to_i
+    if current_customer_id != 0  && previous_customer_id != 0
+      return root_url(subdomain: Apartment::Tenant.current)
+    else
+      return root_url
+    end
+
+
   end
 
 end

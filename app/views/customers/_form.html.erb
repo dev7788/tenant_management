@@ -11,10 +11,31 @@
     </div>
   <% end %>
 
+    <br>
   <div class="field">
     <%= f.label :subdomain %>
     <%= f.text_field :subdomain %>
   </div>
+    <br>
+    <div class="field">
+      <%= f.label :authentication_type %><br />
+      <%= f.label :authentication_type, "Email & Password"  %>
+      <%= f.radio_button :authentication_type, 0, :checked => ( customer.authentication_type == 0 ? 'checked' : '' ) %>
+      <%= f.label :authentication_type, "SAML" %>
+      <%= f.radio_button :authentication_type, 1, :checked => (customer.authentication_type == 1 ? 'checked' : '') %>
+    </div>
+
+    <div class="field" id="email_info" style="<%=customer.authentication_type != 0 ? 'display: none;':''%>">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="field" id="saml_info" style="<%=customer.authentication_type != 1 ? 'display: none;':''%>">
+      <%= f.label :fingerprint %>
+      <%= f.text_field :fingerprint %><br>
+      <%= f.label :idp_login %>
+      <%= f.text_field :idp_login %>
+    </div>
 
   <div class="actions">
     <% if customer.id.nil? %>
@@ -24,3 +45,19 @@
     <% end %>
   </div>
 <% end %>
+
+<% unless @customerUsers.nil?  %>
+<h3> Users </h3>
+<table class="table">
+  <tbody>
+    <% @customerUsers.each do |user| %>
+        <tr>
+          <td>
+            <%= user.email %>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+

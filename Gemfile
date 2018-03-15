@@ -55,3 +55,5 @@ gem 'high_voltage'
 gem "devise_invitable", "~> 1.7"
 gem "binding_of_caller", "~> 0.8.0"
 gem "omniauth-saml", "~> 1.10"
+# Added at 2018-03-14 23:18:14 -0500 by minimac:
+gem "faker", "~> 1.8"

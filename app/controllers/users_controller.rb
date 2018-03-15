@@ -47,4 +47,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:role, :state)
   end
 
+
+
 end

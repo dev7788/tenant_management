@@ -18,7 +18,6 @@ class UserLinksController < ApplicationController
         format.html { redirect_to customers_path, notice: 'UserLink was successfully created.' }
         format.json { render :show, status: :created, location: user_link }
       else
-        binding.pry
         format.html { render :new }
         format.json { render json: user_link.errors, status: :unprocessable_entity }
       end
