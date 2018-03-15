@@ -1,0 +1,26 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-user {
+  padding: 10px;
+}
+
+.button-newuser {
+  float: right; margin-top: 25px;
+}
+
+.users-title {
+  display: inline-block;
+  float: left;
+}
+
+.customer-submit {
+  margin: 10px 0px;
+}
+
+.customer-table {
+  td {
+    padding: 0px 10px;
+  }
+}
