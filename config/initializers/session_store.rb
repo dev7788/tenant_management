@@ -11,4 +11,5 @@ uri = URI.parse(root_url)
 current_hostname = uri.hostname.split(".")
 starts_with_excluded = CtmsRouting.excluded_subdomains.include?(current_hostname.first)
 tld_length = 2 + (starts_with_excluded ? 1 : 0)
-Rails.application.config.session_store :cookie_store, key: '_ApartmentDevise1_session', domain: :all, tld_length: tld_length
+# Rails.application.config.session_store :cookie_store, key: '_ApartmentDevise1_session', domain: :all, tld_length: tld_length
+Rails.application.config.session_store :cookie_store, key: '_ApartmentDevise1_session', tld_length: tld_length

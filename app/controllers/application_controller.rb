@@ -2,8 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery prepend: true
   # protect_from_forgery with: :exception
 
-  skip_before_action :verify_authenticity_token
-
   before_action :authorize_current_activity, :unless => :devise_controller?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -56,8 +54,10 @@ class ApplicationController < ActionController::Base
     current_customer_id = Customer.current&.id
     previous_customer_id = session["customer_id"].to_i
     if current_customer_id != 0  && previous_customer_id != 0
+      puts "aaaa"
       return root_url(subdomain: Apartment::Tenant.current)
     else
+      puts "bbb"
       return root_url
     end
 
