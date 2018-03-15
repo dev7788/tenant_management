@@ -1,6 +1,6 @@
 <% if Customer.current.present? && Customer.current.authentication_type == 1 %>
     <div style="text-align: center;">
-      <%= link_to "Sign in with SAML", "#{user_saml_omniauth_authorize_path()}?subdomain=#{request.subdomain}", class: "btn btn-primary sigin-saml" %>
+      <%= link_to "Sign in with SAML", "#{user_saml_omniauth_authorize_path()}?subdomain=#{Apartment::Tenant.current}", class: "btn btn-primary sigin-saml" %>
     </div>
 <% else %>
     <div class="authform">

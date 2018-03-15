@@ -31,12 +31,12 @@ class ApplicationController < ActionController::Base
         sign_in(User.find(user_link.user_id), scope: :user) if user_link
       end
     end
-
     unless current_customer_id.nil?
       authenticate_user! unless (user_signed_in? || devise_controller?)
       # authorize_action_for current_activity unless ( devise_controller? && (!(self.is_a? Users::InvitationsController)) || ((self.is_a? Users::InvitationsController) && current_user.nil? )  || ((self.is_a? UsersController) && action_name == 'switch_account'))
       session["customer_id"] = current_customer_id
     end
+
 
   end
 
@@ -50,18 +50,12 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
-    puts 'after_sign_in_path_for'
-    current_customer_id = Customer.current&.id
-    previous_customer_id = session["customer_id"].to_i
-    if current_customer_id != 0  && previous_customer_id != 0
-      puts "aaaa"
-      return root_url(subdomain: Apartment::Tenant.current)
-    else
-      puts "bbb"
+    this_subdomain = Apartment::Tenant.current
+    if this_subdomain == '' || this_subdomain == 'public'
       return root_url
+    else
+      return root_url(subdomain: Apartment::Tenant.current)
     end
-
-
   end
 
 end
